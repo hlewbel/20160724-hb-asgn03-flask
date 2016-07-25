@@ -1,0 +1,20 @@
+/* Your CSS goes here */
+input[type="text"], submit {
+    background-color: yellow;
+}
+
+input[type="submit"]{
+    background-color: yellow;
+}
+
+/*input[type="text"] {
+    font-weight: bold;
+}*/
+
+.last{
+    font-weight: bold;
+}
+
+h2{
+    border-style: solid;
+}
