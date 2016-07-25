@@ -2,7 +2,6 @@ from flask import Flask, request, render_template
 #from flask_debugtoolbar import DebugToolbarExtension
 
 
-
 app = Flask(__name__)
 
 
@@ -29,72 +28,19 @@ def application_form():
     """Gets first name, last name, salary, and job title from form submission
     """
 
-    form = request.form
-    print form
-
-    # firstname = request.args.get("firstname")
-    # lastname = request.args.get("lastname")
-    # job = request.args.get("job")
-    # salary = request.args.get("salary")
-
-    # # salary = request.args.get("salary")
-
-    # print firstname
-    # print lastname
-    # print job
-    # print salary
-
-    # return render_template("application-form.html",
-    #                 firstname=firstname,
-    #                 lastname=lastname,
-    #                 job=job,
-    #                 salary=salary)
-
-    # return """
-    #         <html>
-    #             <body>
-    #                 <label for="thank-you-message">
-    #                     <p>Thank you {{firstname}} {{lastname}} for applying
-    #                     to be a {{job}}. Your minimum salary requirement is 
-    #                     {{salary}} dollars."
-    #                     </p>
-    #                 </label>
-    #             </body>
-    #         </html>
-    #     """
-
-    #****** this one
-    # return render_template("./application-response.html",
-    #                 firstname=firstname,
-    #                 lastname=lastname,
-    #                 job=job,
-    #                 salary=salary)
+    #form = request.form
+    #print form
+    firstname = request.args.get("firstname")
+    lastname = request.args.get("lastname")
+    job = request.args.get("job")
+    salary = request.args.get("salary")
 
     return render_template("./application-response.html",
-                    data = form, method = "POST")
-# @app.route("/application")
-# def application(firstname, lastname, job, salary):
-#     """Handles form submission
+                    firstname=firstname,
+                    lastname=lastname,
+                    job=job,
+                    salary=salary)
 
-#     """
-
-#     #call the form file
-
-#     #what about edge cases/failure things?
-
-#     #return thank you message to user
-#     return """
-#         <html>
-#             <body>
-#                 <label for="thank-you-message">
-#                     <p>Thank you {{firstname}} {{lastname}} for applying
-#                     to be a {{job}}. Your minimum salary requirement is 
-#                     {{salary}} dollars."
-#                     </p>
-#                 </label>
-#             </body>
-#         </html>
-            # """
 
 if __name__ == "__main__":
     # We have to set debug=True here, since it has to be True at the

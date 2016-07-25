@@ -1,14 +1,11 @@
-<!doctype html>
-<html>
-<head>
-    <title>Application Response</title>
-</head>
-<body>
-    <label for="thank-you-message">
+{% extends 'base.html' %}
+{% block title %}Application Response{% endblock %}
+
+{% block content %}
+
         <p>Thank you {{firstname}} {{lastname}} for applying
-            to be a {{job}}. Your minimum salary requirement is 
+            to be a {{job}} engineer. Your minimum salary requirement is 
             {{salary}} dollars.
         </p>
-    </label>
-</body>
-</html>
+
+{% endblock %}

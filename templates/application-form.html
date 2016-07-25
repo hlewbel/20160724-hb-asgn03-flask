@@ -1,15 +1,11 @@
-<!doctype html>
-<html>
-<head>
-    <title>Skills-HTML-CSS</title>
-    <link rel="stylesheet" type="text/css" href="./static/styles.css">
-</head>
-<body>
+{% extends 'base.html' %}
+{% block title %}Skills-HTML-CSS{% endblock %}
 
-<!-- your html goes here -->
+{% block content %}
+
     <h1>Welcome! We're so excited you decided to apply to our positions at Ubermelon!</h1>
     <h2>Enter your name, the job title you want to apply for, and click submit!</h2>
-    <form action="/application" method="POST">
+    <form action="/application">
         <label>First name:<br>
             <input type="text" name="firstname" class="first"><br><br>
         </label>
@@ -26,7 +22,7 @@
         <label>Salary:<br>
             <input type="text" name="salary" class="salary"><br><br>
         </label>
-        <a href="/application">Submit</a>
+        <input type="submit" value="Submit!"></input>
     </form>
-</body>
-</html>
+{% endblock %}
+
